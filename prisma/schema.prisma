@@ -1,0 +1,25 @@
+datasource db {
+  provider = "postgresql"
+  url      = "postgresql://user:password@localhost:9991/test3"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+
+
+
+model TravelInsurancePerson {
+  id String @id @default(uuid())
+
+  name String
+}
+
+model TravelInsurance {
+  id         String @id @default(uuid())
+  externalId Int    @unique
+
+  persons TravelInsurancePerson[]
+
+}

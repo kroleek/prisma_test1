@@ -1,0 +1,23 @@
+{
+  "name": "prisma_test1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@prisma/client": "^2.0.0-preview021",
+    "prisma2": "^2.0.0-preview021",
+    "uuid": "^3.4.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.1.1",
+    "@types/uuid": "^3.4.7",
+    "jest": "^25.1.0",
+    "ts-jest": "^25.1.0",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.7.5"
+  },
+  "scripts": {
+    "pretest": "prisma2 generate",
+    "test": "jest"
+  }
+}
